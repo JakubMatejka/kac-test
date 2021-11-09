@@ -1,0 +1,33 @@
+{
+  "parameters": {},
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "source": "in.c-keboola-ex-aws-s3-7241111.cities",
+          "destination": "cities",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": []
+        },
+        {
+          "source": "in.c-keboola-ex-google-drive-7241051.addresses",
+          "destination": "addresses",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": []
+        }
+      ]
+    },
+    "output": {
+      "tables": [
+        {
+          "destination": "out.c-address.address_city",
+          "source": "address_city"
+        }
+      ]
+    }
+  }
+}

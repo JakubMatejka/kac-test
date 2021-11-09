@@ -1,0 +1,28 @@
+{
+  "authorization": {
+    "oauth_api": {
+      "id": "7241051",
+      "version": 3
+    }
+  },
+  "parameters": {
+    "sheets": [
+      {
+        "fileId": "1BsCnJi5z6AUYuom8IRGsK_-f2GNhDqltVTMtdYxv_vY",
+        "fileTitle": "addresses-sample",
+        "sheetId": 1994843968,
+        "sheetTitle": "addresses",
+        "id": 90415,
+        "enabled": true,
+        "header": {
+          "rows": 1
+        },
+        "outputTable": "addresses"
+      }
+    ],
+    "outputBucket": "in.c-keboola-ex-google-drive-7241051"
+  },
+  "processors": {
+    "after": []
+  }
+}

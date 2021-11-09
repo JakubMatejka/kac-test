@@ -1,0 +1,54 @@
+{
+  "phases": [
+    {
+      "id": 81648,
+      "name": "New Phase",
+      "dependsOn": []
+    },
+    {
+      "id": 86681,
+      "name": "New Phase",
+      "dependsOn": [
+        81648
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": 34459,
+      "name": "keboola.ex-aws-s3-7241111",
+      "phase": 81648,
+      "task": {
+        "componentId": "keboola.ex-aws-s3",
+        "configId": "7241111",
+        "mode": "run"
+      },
+      "continueOnFailure": false,
+      "enabled": true
+    },
+    {
+      "id": 30988,
+      "name": "keboola.ex-google-drive-7241051",
+      "phase": 81648,
+      "task": {
+        "componentId": "keboola.ex-google-drive",
+        "configId": "7241051",
+        "mode": "run"
+      },
+      "continueOnFailure": false,
+      "enabled": true
+    },
+    {
+      "id": 3569,
+      "name": "keboola.snowflake-transformation-7241628",
+      "phase": 86681,
+      "task": {
+        "componentId": "keboola.snowflake-transformation",
+        "configId": "7241628",
+        "mode": "run"
+      },
+      "continueOnFailure": false,
+      "enabled": true
+    }
+  ]
+}

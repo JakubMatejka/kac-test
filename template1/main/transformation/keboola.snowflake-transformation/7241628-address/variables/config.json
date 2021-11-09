@@ -1,0 +1,12 @@
+{
+  "variables": [
+    {
+      "name": "state",
+      "type": "string"
+    },
+    {
+      "name": "city",
+      "type": "string"
+    }
+  ]
+}

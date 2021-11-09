@@ -1,0 +1,28 @@
+{
+  "parameters": {
+    "packages": [],
+    "id": "7241688"
+  },
+  "storage": {
+    "input": {
+      "tables": [
+        {
+          "source": "in.c-keboola-ex-aws-s3-7241111.cities",
+          "destination": "cities",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": []
+        },
+        {
+          "source": "in.c-keboola-ex-google-drive-7241051.addresses",
+          "destination": "addresses",
+          "where_column": "",
+          "where_values": [],
+          "where_operator": "eq",
+          "columns": []
+        }
+      ]
+    }
+  }
+}

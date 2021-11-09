@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "project": {
+    "id": 4516,
+    "apiHost": "connection.north-europe.azure.keboola.com"
+  },
+  "sortBy": "id",
+  "naming": {
+    "branch": "{branch_id}-{branch_name}",
+    "config": "{component_type}/{component_id}/{config_id}-{config_name}",
+    "configRow": "rows/{config_row_id}-{config_row_name}",
+    "schedulerConfig": "schedules/{config_id}-{config_name}",
+    "sharedCodeConfig": "_shared/{target_component_id}",
+    "sharedCodeConfigRow": "codes/{config_row_id}-{config_row_name}",
+    "variablesConfig": "variables",
+    "variablesValuesRow": "values/{config_row_name}"
+  },
+  "allowedBranches": [
+    "__main__"
+  ],
+  "ignoredComponents": [],
+  "branches": [
+    {
+      "id": 4908,
+      "path": "main"
+    }
+  ],
+  "configurations": [
+    {
+      "branchId": 4908,
+      "componentId": "ex-generic-v2",
+      "id": "7122721",
+      "path": "extractor/ex-generic-v2/7122721-empty",
+      "rows": []
+    },
+    {
+      "branchId": 4908,
+      "componentId": "keboola.ex-aws-s3",
+      "id": "7241111",
+      "path": "extractor/keboola.ex-aws-s3/7241111-my-aws-s-3-data-source",
+      "rows": [
+        {
+          "id": "7241227",
+          "path": "rows/7241227-jakubm-share-cities-2"
+        }
+      ]
+    },
+    {
+      "branchId": 4908,
+      "componentId": "keboola.ex-google-drive",
+      "id": "7241051",
+      "path": "extractor/keboola.ex-google-drive/7241051-my-google-drive-data-source",
+      "rows": []
+    },
+    {
+      "branchId": 4908,
+      "componentId": "keboola.orchestrator",
+      "id": "7243915",
+      "path": "other/keboola.orchestrator/7243915-daily",
+      "rows": []
+    },
+    {
+      "branchId": 4908,
+      "componentId": "keboola.orchestrator",
+      "id": "7244146",
+      "path": "other/keboola.orchestrator/7244146-daily-2",
+      "rows": []
+    },
+    {
+      "branchId": 4908,
+      "componentId": "keboola.sandboxes",
+      "id": "7241673",
+      "path": "other/keboola.sandboxes/7241673-address",
+      "rows": []
+    },
+    {
+      "branchId": 4908,
+      "componentId": "keboola.scheduler",
+      "id": "7243938",
+      "path": "schedules/7243938-scheduler-for-7243915",
+      "relations": [
+        {
+          "componentId": "keboola.orchestrator",
+          "configId": "7243915",
+          "type": "schedulerFor"
+        }
+      ],
+      "rows": []
+    },
+    {
+      "branchId": 4908,
+      "componentId": "keboola.scheduler",
+      "id": "7244147",
+      "path": "schedules/7244147-scheduler-for-7243915",
+      "relations": [
+        {
+          "componentId": "keboola.orchestrator",
+          "configId": "7244146",
+          "type": "schedulerFor"
+        }
+      ],
+      "rows": []
+    },
+    {
+      "branchId": 4908,
+      "componentId": "keboola.scheduler",
+      "id": "7277240",
+      "path": "schedules/7277240-scheduler-for-7243915",
+      "relations": [
+        {
+          "componentId": "keboola.ex-google-drive",
+          "configId": "7241051",
+          "type": "schedulerFor"
+        }
+      ],
+      "rows": []
+    },
+    {
+      "branchId": 4908,
+      "componentId": "keboola.snowflake-transformation",
+      "id": "7241628",
+      "path": "transformation/keboola.snowflake-transformation/7241628-address",
+      "rows": []
+    },
+    {
+      "branchId": 4908,
+      "componentId": "keboola.variables",
+      "id": "7242844",
+      "path": "variables",
+      "relations": [
+        {
+          "componentId": "keboola.snowflake-transformation",
+          "configId": "7241628",
+          "type": "variablesFor"
+        }
+      ],
+      "rows": [
+        {
+          "id": "7242845",
+          "path": "values/default",
+          "relations": [
+            {
+              "type": "variablesValuesFor"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
